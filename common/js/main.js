@@ -28,3 +28,18 @@ $('.ng_content').readmore({
     lessLink: '<a href="#" class="ng_content_more">閉じる</a>'
 });
 });
+
+$(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash;
+        var $target = $(target);
+        var adjust = -150;
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top + adjust
+        }, 300, 'swing', function () {
+        window.location.hash = target;
+        });
+    });
+});
