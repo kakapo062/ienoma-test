@@ -668,6 +668,7 @@ CTA(黒背景)
     height: 45px;
     padding: 0 16px;
     cursor: pointer;
+    font-size: 16px;
 }
 input::placeholder {
     color: #B3B3B3;
