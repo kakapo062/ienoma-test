@@ -686,7 +686,6 @@ input::placeholder {
     border-radius: 3px;
     background: #F57752;
     border: none;
-    opacity: .5;
     position: relative;
 }
 .contact_btn::after {
@@ -700,6 +699,9 @@ input::placeholder {
     height: 15px;
     top: 21px;
     right: 22px;
+}
+:disabled {
+    opacity: .5;
 }
 /***************
 よくある質問
