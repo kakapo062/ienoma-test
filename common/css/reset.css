@@ -119,6 +119,7 @@ hr {
 /*縦方向の揃え位置を中央揃えに指定しています*/
 input, select {
     vertical-align:middle;
+    width: 100%;
 }
 
 /*画像を縦に並べた時に余白が出ないように*/
