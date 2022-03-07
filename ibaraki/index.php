@@ -113,7 +113,7 @@
     <div class="cta_wrap">
         <div class="cta_inner">
             <p class="cta_title">無料相談はこちら</p>
-            <a href="#" class="fv_cta_btn cta_btn"><span>LINEで友達追加</span></a>
+            <a href="#" class="fv_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
         </div>
     </div>
 
@@ -204,7 +204,7 @@
     <div class="detail_cta_wrap">
         <div class="detail_cta_inner">
             <h2 class="detail_cta_head">無料相談はこちら</h2>
-            <a href="#" class="fv_cta_btn cta_btn"><span>LINEで友達追加</span></a>
+            <a href="#" class="fv_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
             <p class="detail_text detail_text_first">アンケートをお送りいただくまで、<br>こちらからお電話することはありません。</p>
             <p class="detail_text"> LINEで簡単に登録可能です。<br>相談だけでも問題ありませんので、<br>まずはお気軽にお試しください。</p>
         </div>
