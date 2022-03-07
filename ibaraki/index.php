@@ -8,7 +8,8 @@
     </div>
     <div class="fv_cta_wrap">
         <h2 class="fv_cta_title">住宅のプロに無料相談</h2>
-            <a href="#fv_cta" class="fv_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
+            <a href="linecv" class="line_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
+            <a href="#mail_form" class="form_cta_btn"><span>フォームで問い合わせ</span></a>
     </div>
 
     <div class="problem_wrap">
@@ -113,7 +114,8 @@
     <div class="cta_wrap">
         <div class="cta_inner">
             <p class="cta_title">無料相談はこちら</p>
-            <a href="#" class="fv_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
+            <a href="linecv" class="line_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
+            <a href="#mail_form" class="form_cta_btn"><span>フォームで問い合わせ</span></a>
         </div>
     </div>
 
@@ -203,10 +205,44 @@
     <!-- 無料相談はこちら -->
     <div class="detail_cta_wrap">
         <div class="detail_cta_inner">
-            <h2 class="detail_cta_head">無料相談はこちら</h2>
-            <a href="#" class="fv_cta_btn cta_btn"><span>LINEで友だち追加</span></a>
-            <p class="detail_text detail_text_first">アンケートをお送りいただくまで、<br>こちらからお電話することはありません。</p>
-            <p class="detail_text"> LINEで簡単に登録可能です。<br>相談だけでも問題ありませんので、<br>まずはお気軽にお試しください。</p>
+            <h2 class="detail_cta_head">今すぐ住宅メーカーを<br>知りたい方は</h2>
+            <a href="linecv" class="line_cta_btn cta_btn detail_line_btn"><span>LINEで友だち追加</span></a>
+            <p class="detail_cta_head">少しだけ気になる方は</p>
+            <p class="form_cta_btn detail_form_btn"><span>フォームで問い合わせ</span></p>
+            <form id="mail_form" method="POST" action="thanks.php" class="form_wrap">
+                <div class="form_inner">
+                    <dl class="form_item">
+                        <dt class="subject">
+                            <span class="badge require">必須</span>
+                            <span class="label">氏名</span>
+                        </dt>
+                        <dd class="field">
+                            <input type="text" name="name" placeholder="山田 太郎" class="custom-text" required>
+                        </dd>
+                    </dl>
+                    <dl class="form_item">
+                        <dt class="subject">
+                            <span class="badge require">必須</span>
+                            <span class="label">電話番号</span>
+                        </dt>
+                        <dd class="field">
+                            <input type="tel" name="phone" placeholder="0312345678（半角英数）" class="custom-tel" required>
+                        </dd>
+                    </dl>
+                    <dl class="form_item">
+                        <dt class="subject">
+                            <span class="badge require">必須</span>
+                            <span class="label">メールアドレス</span>
+                        </dt>
+                        <dd class="field">
+                            <input type="email" name="email" placeholder="sample@example.com（半角英数）" class="custom-email" required>
+                        </dd>
+                    </dl>
+                    <div class="contact_btn_wrap">
+                        <button name="submitted" type="submit" class="contact_btn" disabled>送信</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 
@@ -262,7 +298,8 @@
     </div>
     <!-- SPのみ表示される追従CTAボタン -->
     <div class="float_cta" id="float_cta">
-        <a href="#fv-cta" class="cta_btn c-btn-float btn_position"><span>LINEで友だち追加</span></a>
+        <a href="linecv" class="cta_btn btn_position"><span>LINEで友だち追加</span></a>
+        <a href="#mail_form" class="float_form_cta_btn btn_position"><span>フォームで問い合わせ</span></a>
     </div>
 </div>
 </main>
