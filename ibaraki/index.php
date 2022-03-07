@@ -49,7 +49,7 @@
                 <img src="../common/images/info_images@2x.png" width="325" height="200" alt="注文住宅のプロがおすすめの建築会社をご紹介します！">
             </figure>
             <h3 class="appeal_sub_caption">専門家が推奨する<br>後悔しない家づくり</h3>
-            <p class="appeal_content">お客様のご予算やライフプラによって<br>最適な建築会社は異なります。<br>ヒアリングした内容をもとに、お客様に一番合った<br>住宅メーカーをご紹介します。</p>
+            <p class="appeal_content">お客様のご予算やライフプランによって<br>最適な建築会社は異なります。<br>ヒアリングした内容をもとに、お客様に一番合った<br>住宅メーカーをご紹介します。</p>
         </div>
     </div>
 
@@ -104,7 +104,7 @@
                         <img src="../common/images/reason_text_04@2x.png" width="80" height="17" alt="reason4">
                     </p>
                     <h3 class="reason_header">月間数万人が訪れる不動産メディア 「イエベスト」と連携</h3>
-                    <p class="reason_content">不動産領域において信頼性の高い情報を発信しているWebサイト「イエベスト」と連携<br>注文住宅に関する知見には自信があります。<br>些細なお悩みでも、注文住宅に詳しい担当者にご相談ください。</p>
+                    <p class="reason_content">不動産領域において信頼性の高い情報を発信しているWebサイト「イエベスト」と連携。<br>注文住宅に関する知見には自信があります。<br>些細なお悩みでも、注文住宅に詳しい担当者にご相談ください。</p>
                 </div>
             </li>
         </ul>
