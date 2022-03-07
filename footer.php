@@ -3,7 +3,7 @@
       <nav class="fnav" id="fnav">
         <ul class="fnav_list">
           <li class="fnav_item">
-            <p>運営会社：TAIL WIND株式会社</p>
+            <a href="http://www.t-wind.co.jp/" target="_blank">運営会社：TAIL WIND株式会社</a>
           </li>
           <li class="fnav_item">
             <a href="https://ienoma.com/privacy.html" target="_blank">プライバシーポリシー</a>

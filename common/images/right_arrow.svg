@@ -1,3 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="7.091" height="12.345" viewBox="0 0 7.091 12.345">
-  <path id="パス_498" data-name="パス 498" d="M0,0,5,5.5,0,11" transform="translate(0.74 0.673)" fill="none" stroke="#00ad7c" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="8.048" height="12.463" viewBox="0 0 8.048 12.463">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f57752;
+      }
+    </style>
+  </defs>
+  <path id="right_arrow" class="cls-1" d="M.682,11.731-.682,10.269,4.433,5.5-.682.731.682-.731,7.367,5.5Z" transform="translate(0.682 0.731)"/>
 </svg>
