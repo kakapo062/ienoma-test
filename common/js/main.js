@@ -29,6 +29,7 @@ $('.ng_content').readmore({
 });
 });
 
+
 $(document).ready(function(){
     $('a[href^="#"]').on('click',function (e) {
         e.preventDefault();
@@ -42,4 +43,87 @@ $(document).ready(function(){
         window.location.hash = target;
         });
     });
+});
+
+$(document).ready(function(){
+
+$('[name=name]').on('change',function() {
+    var name_val = $(this).val();
+    if( name_val != '' ){
+        $(this).closest('dl').addClass('-ok')
+        $(this).closest('dl').removeClass('-err');
+        $(this).next('.err_mes').remove();
+    } else {
+        $(this).closest('dl').addClass('-err')
+        $(this).closest('dl').removeClass('-ok');
+        var elm = err_empty( '氏名' );
+        $(this).after( elm );
+    }
+    btn_act();
+});
+
+$('[name=phone]').on('change',function() {
+    $(this).next('.err_mes').remove();
+    var phone_val = $(this).val();
+    if( phone_val == '' ){
+        $(this).closest('dl').addClass('-err')
+        $(this).closest('dl').removeClass('-ok');
+        var elm = err_empty( '電話番号' );
+        $(this).after( elm );
+    } else if( !phone_val.match(/^0.*/) || !phone_val.match(/^[0-9]{10,11}$/) ) {
+        $(this).closest('dl').addClass('-err')
+        $(this).closest('dl').removeClass('-ok');
+        var elm = err_format();
+        $(this).after( elm );
+    } else {
+        $(this).closest('dl').addClass('-ok')
+        $(this).closest('dl').removeClass('-err');
+        $(this).next('.err_mes').remove();
+    }
+    btn_act();
+
+});
+
+$('[name=email]').on('change',function() {
+    $(this).next('.err_mes').remove();
+    var email_val = $(this).val();
+    if( email_val == '' ){
+        $(this).closest('dl').addClass('-err')
+        $(this).closest('dl').removeClass('-ok');
+        var elm = err_empty( 'メールアドレス' );
+        $(this).after( elm );
+    } else if( !email_val.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/) ) {
+        $(this).closest('dl').addClass('-err')
+        $(this).closest('dl').removeClass('-ok');
+        var elm = err_format();
+        $(this).after( elm );
+    } else {
+        $(this).closest('dl').addClass('-ok')
+        $(this).closest('dl').removeClass('-err');
+    }
+    btn_act();
+});
+
+function err_empty( str ){
+var err_mes = '<p class="err_mes">'+ str + 'を入力してください</p>';
+return err_mes;
+}
+
+function err_format(){
+var err_mes = '<p class="err_mes">正しい形式で入力してください</p>';
+return err_mes;
+}
+
+function btn_act(){
+var ok = $('.-ok').length;
+console.log(ok);
+if( ok == 3 ){
+    $('.submit').prop("disabled", false);
+    $('.submit').addClass('hover-on');
+} else {
+    $('.submit').prop("disabled", true);
+    $('.submit').removeClass('hover-on');
+}
+}
+
 });

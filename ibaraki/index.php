@@ -1,4 +1,11 @@
 <?php include ( dirname(__FILE__) . '/../header.php' ); ?>
+<?php
+session_start();
+// 二重送信防止用トークンの発行
+$token = uniqid('', true);
+//トークンをセッション変数にセット
+$_SESSION['token'] = $token;
+?>
 
 <main>
 <div class="full_inner">
@@ -209,7 +216,8 @@
             <a href="linecv" class="line_cta_btn cta_btn detail_line_btn"><span>LINEで友だち追加</span></a>
             <p class="detail_cta_head">少しだけ気になる方は</p>
             <p class="form_cta_btn detail_form_btn"><span>フォームで問い合わせ</span></p>
-            <form id="mail_form" method="POST" action="thanks.php" class="form_wrap">
+            <form id="mail_form" method="post" action="thanks.php" class="form_wrap">
+            <input type="hidden" name="token" value="<?php echo $token;?>">
                 <div class="form_inner">
                     <dl class="form_item">
                         <dt class="subject">
@@ -239,7 +247,7 @@
                         </dd>
                     </dl>
                     <div class="contact_btn_wrap">
-                        <button name="submitted" type="submit" class="contact_btn" disabled>送信</button>
+                        <button name="submitted" type="submit" class="contact_btn submit">送信</button>
                     </div>
                 </div>
             </form>
