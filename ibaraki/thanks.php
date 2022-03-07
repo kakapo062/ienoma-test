@@ -13,12 +13,10 @@ if($token != "" && $token == $session_token) {
 require '../libs/functions.php';
 
 //POSTされたデータがあれば変数に格納、なければ NULL（変数の初期化）
-$company = isset( $_POST[ 'company' ] ) ? $_POST[ 'company' ] : NULL;
 $name = isset( $_POST[ 'name' ] ) ? $_POST[ 'name' ] : NULL;
 $email = isset( $_POST[ 'email' ] ) ? $_POST[ 'email' ] : NULL;
 $phone = isset( $_POST[ 'phone' ] ) ? $_POST[ 'phone' ] : NULL;
-$message = isset( $_POST[ 'message' ] ) ? $_POST[ 'message' ] : NULL;
-$subject = "【企業用LP】お問い合わせがありました｜宅建Job";
+$subject = "【イエノマLP】お問い合わせがありました";
 
 
 //送信ボタンが押された場合の処理

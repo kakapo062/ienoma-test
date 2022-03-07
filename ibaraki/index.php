@@ -247,7 +247,7 @@ $_SESSION['token'] = $token;
                         </dd>
                     </dl>
                     <div class="contact_btn_wrap">
-                        <button name="submitted" type="submit" class="contact_btn submit">送信</button>
+                        <button name="submitted" type="submit" class="contact_btn submit" disabled>送信</button>
                     </div>
                 </div>
             </form>
