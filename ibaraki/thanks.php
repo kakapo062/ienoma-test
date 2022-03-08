@@ -69,9 +69,10 @@ if (isset($_POST['submitted'])) {
       if ( $result ) {
                           //----------googleスプレッドシート送信---------------------
   //composerでインストールしたライブラリを読み込む
-require_once __DIR__ . '../../../../../vendor/autoload.php';
+// require_once __DIR__ . '../../../../../vendor/autoload.php';
+require('../../../../vendor/autoload.php');
 // サービスアカウント認証で作成したjsonファイル.
-$key_file = __DIR__ . '../../../../../key/ienoma-0f02b8344520.json';
+$key_file = __DIR__.'/../../../../key/ienoma-0f02b8344520.json';
   // 対象のスプレッドシートのIDを指定
 $sheet_id = '1E4lsVxbVDcxzzvTQV7WNSrKTs9-YcyZ4ZfEtNFXqc8U';
 //アカウント認証インスタンスの生成
@@ -87,7 +88,7 @@ $client->setScopes($scopes);
 $sheet = new Google_Service_Sheets($client);
 
 try {
-  $range = 'form-data!A2';
+  $range = 'form-data';
   $values = array(
       array(
 //連携したスプレッドシートの最終行に「A列（一番左）」から順に追記される

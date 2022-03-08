@@ -176,6 +176,9 @@ body {
     bottom: 0;
     z-index: 110;
 }
+.hover-on {
+    cursor: pointer !important;
+}
 .err_mes {
     margin-top: 5px;
     font-size: 10px;
