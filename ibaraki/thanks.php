@@ -50,7 +50,7 @@ if (isset($_POST['submitted'])) {
       $mail_body .= "*****************************" . "\n\n\n";
       $mail_body .= "▼お問い合わせ内容は以下に反映しています。" . "\n";
       $mail_body .= "イエノマLP｜お問い合わせ内容" . "\n";
-      $mail_body .= "https://docs.google.com/spreadsheets/d/19H5tliCmxmM3arq9yE3x7Ga2C8f6dNfTwTishQODHks/edit#gid=0";
+      $mail_body .= "https://docs.google.com/spreadsheets/d/1E4lsVxbVDcxzzvTQV7WNSrKTs9-YcyZ4ZfEtNFXqc8U/edit#gid=0";
   
       //-------- sendmail を使ったメールの送信処理 ------------
       //メールの宛先（名前<メールアドレス> の形式）。値は mailvars.php に記載
@@ -69,9 +69,9 @@ if (isset($_POST['submitted'])) {
       if ( $result ) {
                           //----------googleスプレッドシート送信---------------------
   //composerでインストールしたライブラリを読み込む
-require_once __DIR__ . '/../../../../../vendor/autoload.php';
+require_once __DIR__ . '../../../../../vendor/autoload.php';
 // サービスアカウント認証で作成したjsonファイル.
-$key_file = __DIR__ . '/../../../../../key/ienoma-0f02b8344520.json';
+$key_file = __DIR__ . '../../../../../key/ienoma-0f02b8344520.json';
   // 対象のスプレッドシートのIDを指定
 $sheet_id = '1E4lsVxbVDcxzzvTQV7WNSrKTs9-YcyZ4ZfEtNFXqc8U';
 //アカウント認証インスタンスの生成
