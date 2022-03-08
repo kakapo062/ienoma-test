@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="茨城県のハウスメーカー・工務店探しはイエノマ文住宅。後悔しない家づくりをするために、注文住宅のお悩みを解決する無料相談窓口です。家づくりのプロであるアドバイザーが、あなたに最適な住宅メーカーをご紹介します（完全無料）。">
-    <link rel="icon" href="https://rei-book.com/invest-lp/public/customer/images/favicon.ico" />
+    <link rel="icon" href="../common/images/favicon.ico" />
 	<link rel="stylesheet" href="../common/css/reset.css">
 	<link rel="stylesheet" href="../common/css/style.css">
     <!-- jquery3系 -->
