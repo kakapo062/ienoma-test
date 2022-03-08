@@ -26,7 +26,7 @@ header {
 メイン,FV
 ***************/
 body {
-    background: #ECF2EA;
+    background : #FFF6E5;
 }
 .full_inner {
     padding-top: 50px;
@@ -655,7 +655,7 @@ CTA(黒背景)
     text-align: left;
     display: flex;
     align-items: center;
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 }
 .badge {
     color: #fff;
