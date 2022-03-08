@@ -16,7 +16,7 @@ require 'libs/functions.php';
 $name = isset( $_POST[ 'name' ] ) ? $_POST[ 'name' ] : NULL;
 $email = isset( $_POST[ 'email' ] ) ? $_POST[ 'email' ] : NULL;
 $phone = isset( $_POST[ 'phone' ] ) ? $_POST[ 'phone' ] : NULL;
-$subject = "【イエノマLP】お問い合わせがありました";
+$subject = "【イエノマLP】お申し込みがありました";
 
 
 //送信ボタンが押された場合の処理
@@ -39,7 +39,7 @@ if (isset($_POST['submitted'])) {
       //メールアドレス等を記述したファイルの読み込み
       require 'libs/mailvars.php';
       //メール本文の組み立て。値は h() でエスケープ処理
-      $mail_body = "イエノマLPから、" . "\n" . "以下の内容にてお問い合わせがありました。" . "\n";
+      $mail_body = "イエノマLPから、" . "\n" . "以下の内容にてお申し込みがありました。" . "\n";
       $mail_body .= "*****************************" . "\n";
       $mail_body .= "【対象サイト】" . "\n" ;
       $mail_body .= "イエノマLP" . "\n" ;
@@ -48,8 +48,8 @@ if (isset($_POST['submitted'])) {
       $mail_body .=  "【電話番号】\n" .h($phone) . "\n\n";
       $mail_body .=  "【メールアドレス】\n" .h($email) . "\n\n";
       $mail_body .= "*****************************" . "\n\n\n";
-      $mail_body .= "▼お問い合わせ内容は以下に反映しています。" . "\n";
-      $mail_body .= "イエノマLP｜お問い合わせ内容" . "\n";
+      $mail_body .= "▼お申し込み内容は以下に反映しています。" . "\n";
+      $mail_body .= "イエノマLP｜お申し込み内容" . "\n";
       $mail_body .= "https://docs.google.com/spreadsheets/d/1E4lsVxbVDcxzzvTQV7WNSrKTs9-YcyZ4ZfEtNFXqc8U/edit#gid=0";
   
       //-------- sendmail を使ったメールの送信処理 ------------
@@ -77,12 +77,12 @@ if (isset($_POST['submitted'])) {
   $ar_header .= "From: " . mb_encode_mimeheader( AUTO_REPLY_NAME ) . " <" . MAIL_TO . ">\n";
   $ar_header .= "Reply-To: " . mb_encode_mimeheader( AUTO_REPLY_NAME ) . " <" . MAIL_TO . ">\n";
   //件名
-  $ar_subject = 'お問い合わせ自動返信メール';
+  $ar_subject = 'お申し込みを受け付けました | 家づくりの窓口イエノマ';
   //本文
   $ar_body = $name." 様\n\n";
-  $ar_body .= "この度は、お問い合わせ頂き誠にありがとうございます。" . "\n\n";
-  $ar_body .= "下記の内容でお問い合わせを受け付けました。\n\n";
-  $ar_body .= "お問い合わせ日時：" . date("Y年m月d日 D H時i分") . "\n";
+  $ar_body .= "この度は、家づくり相談のお申し込み頂き誠にありがとうございます。" . "\n\n";
+  $ar_body .= "下記の内容でお申し込みを受け付けました。\n\n";
+  $ar_body .= "お申し込み日時：" . date("Y年m月d日 D H時i分") . "\n";
   $ar_body .= "お名前：" . $name . "\n";
   $ar_body .= "お電話番号： " . $phone . "\n\n" ;
   $ar_body .= "メールアドレス：" . $email . "\n";
@@ -102,8 +102,6 @@ if (isset($_POST['submitted'])) {
   }
   $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']; 
   header('Location:' . $url . $params);
-  exit;
-
                           //----------googleスプレッドシート送信---------------------
   //composerでインストールしたライブラリを読み込む
 // require_once __DIR__ . '../../../../../vendor/autoload.php';

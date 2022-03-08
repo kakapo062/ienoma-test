@@ -1,6 +1,7 @@
 <?php
 //メールの宛先（To）のメールアドレス
 // 本番反映時には、s.takken@hayfield.jpと入力する
+// 通知メールの送信先、自動返信メールの送付元のメアドを入力
 define('MAIL_TO', "k.kanazono@hayfield.jp");
 //メールの宛先（To）の名前
 define('MAIL_TO_NAME', "");
