@@ -67,6 +67,43 @@ if (isset($_POST['submitted'])) {
       $result = mb_send_mail( $mailTo, $subject, $mail_body, $headers );
       //メールが送信された場合の処理
       if ( $result ) {
+         
+      //-------- 自動返信メールの処理 ------------
+  //ヘッダー情報
+  $ar_header = "MIME-Version: 1.0\n";
+  //Return-Pathに指定するメールアドレス
+  $returnMail = MAIL_RETURN_PATH; //
+  // AUTO_REPLY_NAME や MAIL_TO は mailvars.php で定義
+  $ar_header .= "From: " . mb_encode_mimeheader( AUTO_REPLY_NAME ) . " <" . MAIL_TO . ">\n";
+  $ar_header .= "Reply-To: " . mb_encode_mimeheader( AUTO_REPLY_NAME ) . " <" . MAIL_TO . ">\n";
+  //件名
+  $ar_subject = 'お問い合わせ自動返信メール';
+  //本文
+  $ar_body = $name." 様\n\n";
+  $ar_body .= "この度は、お問い合わせ頂き誠にありがとうございます。" . "\n\n";
+  $ar_body .= "下記の内容でお問い合わせを受け付けました。\n\n";
+  $ar_body .= "お問い合わせ日時：" . date("Y年m月d日 D H時i分") . "\n";
+  $ar_body .= "お名前：" . $name . "\n";
+  $ar_body .= "お電話番号： " . $phone . "\n\n" ;
+  $ar_body .= "メールアドレス：" . $email . "\n";
+
+ //自動返信メールを送信（送信結果を変数 $result2 に代入）
+ if ( ini_get( 'safe_mode' ) ) {
+  $result2 = mb_send_mail( $email, $ar_subject, $ar_body , $ar_header  );
+} else {
+  $result2 = mb_send_mail( $email, $ar_subject, $ar_body , $ar_header , '-f' . $returnMail );
+}
+  //再読み込みによる二重送信の防止
+  //自動返信の送信結果（$result2）をパラメータに追加
+  $params = '?result='. $result .'&result2=' . $result2;
+  //サーバー変数 $_SERVER['HTTPS'] が取得出来ない環境用
+  if(isset($_SERVER['HTTP_X_FORWARDED_PROTO']) and $_SERVER['HTTP_X_FORWARDED_PROTO'] === "https") {
+    $_SERVER['HTTPS'] = 'on';
+  }
+  $url = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://').$_SERVER['HTTP_HOST'].$_SERVER['SCRIPT_NAME']; 
+  header('Location:' . $url . $params);
+  exit;
+
                           //----------googleスプレッドシート送信---------------------
   //composerでインストールしたライブラリを読み込む
 // require_once __DIR__ . '../../../../../vendor/autoload.php';
