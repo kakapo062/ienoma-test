@@ -7,4 +7,4 @@ define('MAIL_TO_NAME', "");
 //Return-Pathに指定するメールアドレス
 define('MAIL_RETURN_PATH', '$email');
 //自動返信の返信先名前（自動返信を設定する場合）
-define('AUTO_REPLY_NAME', 'お申し込み企業様');
+define('AUTO_REPLY_NAME', 'お申し込み者様');

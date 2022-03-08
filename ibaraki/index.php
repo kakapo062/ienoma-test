@@ -306,8 +306,8 @@ $_SESSION['token'] = $token;
     </div>
     <!-- SPのみ表示される追従CTAボタン -->
     <div class="float_cta" id="float_cta">
-        <a href="linecv" class="cta_btn btn_position"><span>LINEで友だち追加</span></a>
-        <a href="#mail_form" class="float_form_cta_btn btn_position"><span>フォームで問い合わせ</span></a>
+        <a href="linecv" class="cta_btn btn_position"><span>友だち追加</span></a>
+        <a href="#mail_form" class="float_form_cta_btn btn_position"><span>フォーム問い合わせ</span></a>
     </div>
 </div>
 </main>
