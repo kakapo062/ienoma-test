@@ -19,7 +19,7 @@
         <div class="header_inner">
             <div class="header_content">
                 <h1>
-                <a href="#" class="gnav_logo">
+                <a href="https://ienoma.com/ibaraki/" class="gnav_logo">
                     <img src="../common/images/header_logo@2x.png" width="153" height="16" alt="イエノマ注文住宅" class="header_logo">
                 </a>
                 </h1>

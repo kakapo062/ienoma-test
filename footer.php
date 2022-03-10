@@ -11,7 +11,7 @@
         </ul>
       </nav>
       <div class="footer_logo_wrap">
-          <a href="#" class="footer_logo"><img src="../common/images/footer_logo@2x.png" width="150" height="34" alt="イエノマ注文住宅"></a>
+          <a href="https://ienoma.com/ibaraki/" class="footer_logo"><img src="../common/images/footer_logo@2x.png" width="150" height="34" alt="イエノマ注文住宅"></a>
       </div>
       <p class="copyright">Copyright 2021 ienoma.</p>
     </div>
